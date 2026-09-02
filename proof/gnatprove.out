@@ -1,0 +1,42 @@
+=========================
+Summary of SPARK analysis
+=========================
+
+------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow                    Provers   Justified   Unproved
+------------------------------------------------------------------------------------------------
+Data Dependencies                 .          .                          .           .          .
+Flow Dependencies                 .          .                          .           .          .
+Initialization                    5          5                          .           .          .
+Non-Aliasing                      .          .                          .           .          .
+Run-time Checks                  57          .                    57 (Z3)           .          .
+Assertions                        1          .                     1 (Z3)           .          .
+Functional Contracts              4          .    4 (Trivial 14%, Z3 86%)           .          .
+LSP Verification                  .          .                          .           .          .
+Termination                       2          2                          .           .          .
+Concurrency                       .          .                          .           .          .
+------------------------------------------------------------------------------------------------
+Total                            69    7 (10%)                   62 (90%)           .          .
+
+
+max steps used for successful proof: 178856
+
+============================
+Most difficult proved checks
+============================
+
+No check found with max time greater than 1 second
+
+========================
+Detailed analysis report
+========================
+
+Analyzed 4 units
+in unit pusparser, 0 subprograms and packages out of 0 analyzed
+in unit pusparser-core, 0 subprograms and packages out of 0 analyzed
+in unit pusparser-core-telemetry, 4 subprograms and packages out of 4 analyzed
+  Pusparser.Core.Telemetry at pusparser-core-telemetry.ads:1 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (0 checks)
+  Pusparser.Core.Telemetry.Get_CCSDS_Total_Length at pusparser-core-telemetry.ads:72 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (4 checks)
+  Pusparser.Core.Telemetry.Model_Get_Apid at pusparser-core-telemetry.ads:78 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (5 checks)
+  Pusparser.Core.Telemetry.PUS_Deserialize at pusparser-core-telemetry.ads:92 flow analyzed (0 errors, 0 checks, 0 warnings and 0 pragma Assume statements) and proved (53 checks)
+in unit pusparser_config, 0 subprograms and packages out of 0 analyzed

@@ -1,5 +1,7 @@
 # Packet Utilization Standard Parser
 
+![SPARK Verification](https://img.shields.io/badge/SPARK-proved-brightgreen)
+
 PUS (Packet Utilization Standard) Parser - это верифицированная библиотека на языке Ada SPARK, реализующая универсальный движок для разбора и упаковки пакетов по стандартам **ECSS-E-ST-70-41C (Telemetry and Telecommand Packet
 Utilization)** и **CCSDS 133.0-B-1 (Space Packet Protocol)**.
 
