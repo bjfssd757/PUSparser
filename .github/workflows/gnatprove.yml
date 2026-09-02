@@ -14,10 +14,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Ada and SPARK Toolchain
-        uses: ada-actions/toolchain@v3
+      - name: Set up Ada and SPARK Toolchain
+        uses: ada-actions/toolchain@dev
         with:
-          distrib: community
+          distrib: fsf
 
       - name: Verify with GNAT Prove
         run: |
