@@ -1,0 +1,24 @@
+name: GNAT Prove Verification
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  spark_verify:
+    name: SPARK Formal Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ada and SPARK Toolchain
+        uses: ada-actions/toolchain@v3
+        with:
+          distrib: community
+
+      - name: Verify with GNAT Prove
+        run: |
+          alr gnatprove -P pusparser.gpr --prover=z3,cvc5 --report=all --level=4 -j0
